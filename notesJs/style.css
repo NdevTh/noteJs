@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+.note {
+    width: 260px;
+    /* min-height: 260px; */
+    background-color: rgb(255, 253, 127);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* transform: translate(-50% , -50%); */
+    
+}
+
+/* .delete_button{
+    background: none;
+    border: solid 0px;
+    font-size: "";
+} */
+
+.handle {
+    height: 20px;
+    background-color: #ffd000;
+    text-align: right;
+    padding: 2px;
+}
+.note textarea{
+    width: 100%;
+    /* height: calc(100% - 20px);  une des solution pour avoir le dimension, qui remplace display et 
+    flex direction dans note */
+     min-height: 236px; /*hauteur de la note moins celle de la poignée */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 4px;
+    box-sizing: border-box;
+    resize:none;
+    color:rgb(243, 146, 235);
+    font-family: sans-serif;
+}

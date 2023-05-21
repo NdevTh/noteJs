@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retour de valeurs</title>
+</head>
+<body>
+    
+    <script>
+        // 1) Rtrner une valeur pour pouvoir l'utiliser ensuite
+        function formule(nombre) {
+
+            var resultat = nombre * 2 + 1.5;
+            return resultat; // on permet à la fct de renvoyer (ou retourner) une valeur; aisin, lorqu'onappelera cette fct on pourra manipuler une valeur qu'elle fournira. C'est typiquement  ce qui se passe avec Math.round() ou encore document.querySelector().
+
+        }
+         formule(10); // Inutile : le résultat existe bien, mais on n'y accède pas
+        var nombreApresFormul = formule(5);
+        console.log(nombreApresFormul);
+
+        // 2) Utiliser return pour interrompre une fonction
+
+        function fonction2(params) {
+            alert("n'imoprte quoi");
+            return "n'importe quoi";
+ 
+            alert("message2");  //"Ne s'exécutera pas 
+        }
+
+        fonction2();
+
+         function messageSiGrandNombre(nombre) {
+        //     if(nombre>=1000){
+        //    alert ("le nombre est grand");
+        // }
+            // OU :
+        if (nombre<1000) { // Si c'est le cas, on interropmpt la fct
+            return; // On peut aussi ne rien retourner - la cfct s'interrompra qd-mm
+        }
+        alert("le nombre est grande");// Ne s'exécutera pas si le test ci-dessus se vérifie
+        }
+        messageSiGrandNombre(1090);
+
+    </script>
+</body>
+</html>

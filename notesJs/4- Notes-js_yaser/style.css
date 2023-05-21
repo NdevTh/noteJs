@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    background-color: rgb(80, 102, 108);
+}
+.note {
+    width: 260px;
+    /* min-height: 255px; */
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* la position de la note est au centre avec ces -50% */
+    transform: translate(-50%, -50%);
+}
+.handle {
+    height: 30px;
+    background-color: coral;
+    text-align: end;
+    padding: 2px;
+}
+.note textarea {
+    width: 100%;
+    /*on peut calculer en css 
+    height: calc(100% - 34px);*/
+    min-height: 230px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 4px;
+    box-sizing: border-box;
+    resize: none; /* pourenlever la petite poignet qui agrandit l'area*/
+    color: rgb(240, 83, 83);
+    font-family: sans-serif;
+}
